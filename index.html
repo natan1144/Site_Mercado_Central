@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mercado Central — Riacho Fundo I, Brasília</title>
+  <title>Mercado Central</title>
   <link rel="icon" type="image/png" href="img/logo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="mercado.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+  <!-- CABEÇALHO -->
+  <header>
 
   <!-- NAV -->
   <nav>
@@ -49,6 +53,29 @@
     </li>
   </ul>
 </div>
+
+  </header>
+
+  <main>
+  <button class="hamb-btn" id="hambBtn" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#diferenciais">Sobre</a></li>
+    <li><a href="#promocoes">Promoções</a></li>
+    <li><a href="#horarios">Horários</a></li>
+    <li><a href="#depoimentos">Avaliações</a></li>
+    <li class="mobile-menu-buttons">
+      <a class="nav-cta" href="tel:+556133992695">Ligar agora</a>
+      <a class="nav-wpp" href="https://api.whatsapp.com/send?phone=5561999222941" target="_blank" rel="noopener">WhatsApp</a>
+    </li>
+  </ul>
+</div>
+
+  <main>
 
   <!-- HERO -->
   <section class="hero">
@@ -115,36 +142,50 @@
     <div class="section-label">Por que o Mercado Central?</div>
     <h2 class="section-title">Qualidade que você vê,<br>preço que você sente</h2>
     <p class="section-sub">Um mercado de bairro completo no Riacho Fundo I, com boa variedade de produtos, atendimento atencioso e entrega em domicílio.</p>
-    <div class="cards-grid">
-      <div class="card card-destaque">
-        <div class="card-ico">🥩</div>
-        <div class="card-title">Melhor Açougue do Riacho Fundo</div>
-        <div class="card-desc">Cortes frescos e as melhores carnes da região — esse é o ponto forte que nossos clientes mais elogiam.</div>
-      </div>
-      <div class="card">
-        <div class="card-ico">🛍️</div>
-        <div class="card-title">Boa Variedade de Produtos</div>
-        <div class="card-desc">De hortifruti a mercearia, higiene e bebidas: você encontra tudo o que precisa sem precisar ir longe.</div>
-      </div>
-      <div class="card">
-        <div class="card-ico">🚚</div>
-        <div class="card-title">Entrega em Domicílio</div>
-        <div class="card-desc">Peça pelo telefone e receba em casa no Riacho Fundo I. Praticidade para o seu dia a dia.</div>
-      </div>
-      <div class="card">
-        <div class="card-ico">💳</div>
-        <div class="card-title">Preços Competitivos</div>
-        <div class="card-desc">Preços justos e promoções semanais para que sua compra caiba no orçamento.</div>
-      </div>
-      <div class="card">
-        <div class="card-ico">📍</div>
-        <div class="card-title">Localização Central</div>
-        <div class="card-desc">Lote 18, Riacho Fundo I — fácil de chegar, com acesso conveniente para toda a vizinhança.</div>
-      </div>
-      <div class="card">
-        <div class="card-ico">🤝</div>
-        <div class="card-title">Atendimento de Bairro</div>
-        <div class="card-desc">Equipe prestativa e ambiente acolhedor. Aqui você não é só mais um cliente, é vizinho.</div>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-destaque h-100">
+            <div class="card-ico">🥩</div>
+            <div class="card-title">Melhor Açougue do Riacho Fundo</div>
+            <div class="card-desc">Cortes frescos e as melhores carnes da região — esse é o ponto forte que nossos clientes mais elogiam.</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-ico">🛍️</div>
+            <div class="card-title">Boa Variedade de Produtos</div>
+            <div class="card-desc">De hortifruti a mercearia, higiene e bebidas: você encontra tudo o que precisa sem precisar ir longe.</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-ico">🚚</div>
+            <div class="card-title">Entrega em Domicílio</div>
+            <div class="card-desc">Peça pelo telefone e receba em casa no Riacho Fundo I. Praticidade para o seu dia a dia.</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-ico">💳</div>
+            <div class="card-title">Preços Competitivos</div>
+            <div class="card-desc">Preços justos e promoções semanais para que sua compra caiba no orçamento.</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-ico">📍</div>
+            <div class="card-title">Localização Central</div>
+            <div class="card-desc">Lote 18, Riacho Fundo I — fácil de chegar, com acesso conveniente para toda a vizinhança.</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-ico">🤝</div>
+            <div class="card-title">Atendimento de Bairro</div>
+            <div class="card-desc">Equipe prestativa e ambiente acolhedor. Aqui você não é só mais um cliente, é vizinho.</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -157,23 +198,23 @@
   <p class="section-sub">O açougue mais elogiado do Riacho Fundo I. Veja você mesmo a qualidade dos nossos cortes.</p>
 
   <div class="galeria-destaque">
-    <div class="foto foto-principal" onclick="abrirLightbox(this)">
+    <div class="foto foto-principal" role="button" tabindex="0" aria-label="Ampliar foto: Churrasco com carnes do Mercado Central" onclick="abrirLightbox(this)" onkeydown="ativarLightboxTeclado(event, this)">
       <img src="img/churrasco.jpeg" alt="Churrasco com carnes do Mercado Central" />
       <div class="legenda">🔥 Do nosso açougue direto para a sua grelha</div>
     </div>
-    <div class="foto foto-secundaria" onclick="abrirLightbox(this)">
+    <div class="foto foto-secundaria" role="button" tabindex="0" aria-label="Ampliar foto: Cortes frescos do açougue" onclick="abrirLightbox(this)" onkeydown="ativarLightboxTeclado(event, this)">
       <img src="img/carne1.jpeg" alt="Cortes frescos do açougue" />
       <div class="legenda">Cortes variados frescos do dia</div>
     </div>
-    <div class="foto foto-secundaria" onclick="abrirLightbox(this)">
+    <div class="foto foto-secundaria" role="button" tabindex="0" aria-label="Ampliar foto: Corte em leque aberto" onclick="abrirLightbox(this)" onkeydown="ativarLightboxTeclado(event, this)">
       <img src="img/carne2.jpeg" alt="Corte em leque aberto" />
       <div class="legenda">Corte especial em leque</div>
     </div>
   </div>
 
   <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" onclick="fecharLightbox()">
-    <button class="lightbox-fechar" onclick="fecharLightbox()">✕</button>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada" onclick="fecharLightbox()">
+    <button class="lightbox-fechar" aria-label="Fechar foto ampliada" onclick="fecharLightbox()">✕</button>
     <img id="lightbox-img" src="" alt="Foto ampliada" />
   </div>
 </section>
@@ -310,6 +351,8 @@
 
 </section>
 
+  </main>
+
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo">
@@ -323,6 +366,6 @@
     <p style="margin-top:.75rem;font-size:.78rem;opacity:.5;">© 2026 Mercado Central. Todos os direitos reservados.</p>
   </footer>
 
-  <script src="mercado.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

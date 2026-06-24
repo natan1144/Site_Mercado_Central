@@ -23,18 +23,19 @@ const nav = document.querySelector('nav');
 
 window.addEventListener('scroll', () => {
   const current = window.scrollY;
+
   if (current > lastScroll && current > 120) {
     nav.style.transform = 'translateY(-100%)';
   } else {
     nav.style.transform = 'translateY(0)';
   }
+
   lastScroll = current;
 
-  // fecha o menu mobile se o usuário rolar a página
   closeMobileMenu();
 });
 
-// ── Animação de entrada nos cards (scroll reveal) ─────────────────────
+// ── Animação de entrada nos cards ─────────────────────────────────────
 const cards = document.querySelectorAll('.card, .promo-card, .dep-card');
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -54,41 +55,67 @@ cards.forEach(card => {
   revealObserver.observe(card);
 });
 
-// Lightbox da galeria
+// ── Lightbox da galeria ───────────────────────────────────────────────
+let elementoComFocoAnterior = null;
+
 function abrirLightbox(el) {
-  const src = el.querySelector('img').src;
-  document.getElementById('lightbox-img').src = src;
+  const imagemOriginal = el.querySelector('img');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  elementoComFocoAnterior = document.activeElement;
+
+  lightboxImg.src = imagemOriginal.src;
+  lightboxImg.alt = imagemOriginal.alt || 'Foto ampliada';
+
   document.getElementById('lightbox').classList.add('ativo');
+  document.querySelector('.lightbox-fechar').focus();
 }
+
 function fecharLightbox() {
   document.getElementById('lightbox').classList.remove('ativo');
+
+  if (elementoComFocoAnterior) {
+    elementoComFocoAnterior.focus();
+  }
 }
+
+function ativarLightboxTeclado(event, el) {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+    abrirLightbox(el);
+  }
+}
+
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') fecharLightbox();
 });
 
-// ── Menu hambúrguer (mobile) ───────────────────────────────────────────
+// ── Menu hambúrguer ──────────────────────────────────────────────────
 function toggleMobileMenu() {
   const menu = document.getElementById('mobileMenu');
   const btn = document.getElementById('hambBtn');
+
   const aberto = menu.classList.toggle('aberto');
+
   btn.classList.toggle('ativo', aberto);
   btn.setAttribute('aria-expanded', aberto);
 }
+
 function closeMobileMenu() {
   const menu = document.getElementById('mobileMenu');
   const btn = document.getElementById('hambBtn');
+
   menu.classList.remove('aberto');
   btn.classList.remove('ativo');
   btn.setAttribute('aria-expanded', 'false');
 }
 
 document.getElementById('hambBtn').addEventListener('click', toggleMobileMenu);
+
 document.querySelectorAll('#mobileMenu a').forEach(link => {
   link.addEventListener('click', closeMobileMenu);
 });
 
-// fecha o menu mobile automaticamente se a tela for redimensionada para desktop
 window.addEventListener('resize', () => {
   if (window.innerWidth > 768) closeMobileMenu();
 });

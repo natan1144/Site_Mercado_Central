@@ -212,7 +212,9 @@ section { padding: 6rem 8%; }
 
 /* DIFERENCIAIS */
 .diferenciais { background: var(--creme); }
-.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+/* Sections já têm padding lateral próprio (.section { padding: 6rem 8% }),
+   então o .container do Bootstrap usado dentro delas não precisa de padding/max-width extra */
+.diferenciais .container { max-width: 100%; padding-left: 0; padding-right: 0; }
 .card { background: #fff; border: 1px solid var(--borda); border-radius: 16px; padding: 2rem; transition: transform .2s, box-shadow .2s; }
 .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(43,45,126,.1); }
 .card-ico { font-size: 2.2rem; margin-bottom: 1rem; }
