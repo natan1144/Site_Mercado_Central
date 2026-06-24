@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mercado Central — Riacho Fundo I, Brasília</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="mercado.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+  <div class="nav-logo">
+    <img src="img/logo.png" alt="Mercado Central" />
+  </div>
+  <ul class="nav-links">
+    <li><a href="#diferenciais">Sobre</a></li>
+    <li><a href="#promocoes">Promoções</a></li>
+    <li><a href="#horarios">Horários</a></li>
+    <li><a href="#depoimentos">Avaliações</a></li>
+  </ul>
+
+  <div class="nav-buttons">
+    <a class="nav-cta" href="tel:+556133992695">Ligar agora</a>
+    <a class="nav-wpp" href="https://api.whatsapp.com/send?phone=5561999222941" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4c-4.93 0-8.94 4-8.94 8.93a8.87 8.87 0 0 0 1.32 4.7L4 22l4.5-1.36a8.94 8.94 0 0 0 3.55.75h.01c4.92 0 8.94-4 8.94-8.93a8.88 8.88 0 0 0-2.4-6.14ZM12.06 20a7.4 7.4 0 0 1-3.77-1.03l-.27-.16-2.8.85.84-2.75-.18-.28a7.42 7.42 0 0 1-1.13-3.94c0-4.1 3.34-7.44 7.45-7.44a7.4 7.4 0 0 1 5.27 2.18 7.4 7.4 0 0 1 2.17 5.26c0 4.1-3.34 7.44-7.45 7.44Zm4.08-5.57c-.22-.11-1.32-.65-1.52-.73-.2-.07-.35-.11-.5.11-.15.22-.57.73-.7.88-.13.15-.26.16-.48.05-.22-.11-.93-.34-1.77-1.1a6.65 6.65 0 0 1-1.23-1.53c-.13-.22-.01-.34.1-.45.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.16.04-.3-.02-.42-.07-.11-.6-1.45-.82-1.98-.22-.52-.45-.46-.62-.46-.16 0-.34-.02-.52-.02-.18 0-.47.07-.72.32-.25.25-.96.94-.96 2.3 0 1.35.99 2.66 1.12 2.85.14.18 1.93 2.95 4.67 4.02 2.74 1.08 2.74.72 3.23.68.49-.04 1.6-.65 1.83-1.28.22-.62.22-1.16.16-1.27-.06-.11-.22-.18-.45-.29Z"/>
+      </svg>
+      WhatsApp
+    </a>
+  </div>
+
+  <button class="hamb-btn" id="hambBtn" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMobileMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#diferenciais" onclick="closeMobileMenu()">Sobre</a></li>
+    <li><a href="#promocoes" onclick="closeMobileMenu()">Promoções</a></li>
+    <li><a href="#horarios" onclick="closeMobileMenu()">Horários</a></li>
+    <li><a href="#depoimentos" onclick="closeMobileMenu()">Avaliações</a></li>
+    <li class="mobile-menu-buttons">
+      <a class="nav-cta" href="tel:+556133992695">Ligar agora</a>
+      <a class="nav-wpp" href="https://api.whatsapp.com/send?phone=5561999222941" target="_blank" rel="noopener">WhatsApp</a>
+    </li>
+  </ul>
+</div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <div class="hero-logo-wrap drop">
+        <img src="img/logo.png" alt="Mercado Central" />
+      </div>
+      <span class="hero-eyebrow drop">Riacho Fundo I — Brasília · DF</span>
+      <h1 class="hero-title">
+        <span class="linha1 drop">Tudo que você</span>
+        <span class="linha2 drop">precisa, <em>pertinho</em></span>
+        <span class="linha3 drop">de casa</span>
+      </h1>
+      <p class="hero-sub drop">
+        Boa variedade, preços justos e o melhor açougue do Riacho Fundo I.
+        Um mercado de bairro onde você encontra de tudo — com entrega em domicílio.
+      </p>
+      <div class="hero-actions drop">
+        <a class="btn-primary" href="#promocoes">Ver promoções do dia</a>
+        <a class="btn-ghost" href="https://maps.google.com/?q=Mercado+Central+Riacho+Fundo+1+Brasilia" target="_blank" rel="noopener">Como chegar →</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card drop">
+        <div class="rating-big">4,3</div>
+        <div class="rating-stars">★★★★☆</div>
+        <div class="rating-label">24 avaliações no Google</div>
+      </div>
+      <div class="hero-stats drop">
+        <div class="stat"><div class="stat-num">800+</div><div class="stat-label">Produtos</div></div>
+        <div class="stat"><div class="stat-num">🚚</div><div class="stat-label">Entrega</div></div>
+        <div class="stat"><div class="stat-num">🥩</div><div class="stat-label">Açougue</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTEIRA -->
+  <div class="esteira-wrap" aria-hidden="true">
+    <div class="esteira-track">
+      <div class="esteira-item"><span class="ico">🍎</span> Frutas Frescas</div>
+      <div class="esteira-item"><span class="ico">🥦</span> Verduras do Dia</div>
+      <div class="esteira-item"><span class="ico">🥩</span> Açougue Premiado</div>
+      <div class="esteira-item"><span class="ico">🥛</span> Laticínios</div>
+      <div class="esteira-item"><span class="ico">🐟</span> Peixaria</div>
+      <div class="esteira-item"><span class="ico">🫙</span> Mercearia</div>
+      <div class="esteira-item"><span class="ico">🧴</span> Higiene & Limpeza</div>
+      <div class="esteira-item"><span class="ico">🌽</span> Cereais Granel</div>
+      <div class="esteira-item"><span class="ico">🍷</span> Bebidas</div>
+      <!-- duplicata para loop -->
+      <div class="esteira-item"><span class="ico">🍎</span> Frutas Frescas</div>
+      <div class="esteira-item"><span class="ico">🥦</span> Verduras do Dia</div>
+      <div class="esteira-item"><span class="ico">🥩</span> Açougue Premiado</div>
+      <div class="esteira-item"><span class="ico">🥛</span> Laticínios</div>
+      <div class="esteira-item"><span class="ico">🐟</span> Peixaria</div>
+      <div class="esteira-item"><span class="ico">🫙</span> Mercearia</div>
+      <div class="esteira-item"><span class="ico">🧴</span> Higiene & Limpeza</div>
+      <div class="esteira-item"><span class="ico">🌽</span> Cereais Granel</div>
+      <div class="esteira-item"><span class="ico">🍷</span> Bebidas</div>
+    </div>
+  </div>
+
+  <!-- DIFERENCIAIS -->
+  <section class="diferenciais" id="diferenciais">
+    <div class="section-label">Por que o Mercado Central?</div>
+    <h2 class="section-title">Qualidade que você vê,<br>preço que você sente</h2>
+    <p class="section-sub">Um mercado de bairro completo no Riacho Fundo I, com boa variedade de produtos, atendimento atencioso e entrega em domicílio.</p>
+    <div class="cards-grid">
+      <div class="card card-destaque">
+        <div class="card-ico">🥩</div>
+        <div class="card-title">Melhor Açougue do Riacho Fundo</div>
+        <div class="card-desc">Cortes frescos e as melhores carnes da região — esse é o ponto forte que nossos clientes mais elogiam.</div>
+      </div>
+      <div class="card">
+        <div class="card-ico">🛍️</div>
+        <div class="card-title">Boa Variedade de Produtos</div>
+        <div class="card-desc">De hortifruti a mercearia, higiene e bebidas: você encontra tudo o que precisa sem precisar ir longe.</div>
+      </div>
+      <div class="card">
+        <div class="card-ico">🚚</div>
+        <div class="card-title">Entrega em Domicílio</div>
+        <div class="card-desc">Peça pelo telefone e receba em casa no Riacho Fundo I. Praticidade para o seu dia a dia.</div>
+      </div>
+      <div class="card">
+        <div class="card-ico">💳</div>
+        <div class="card-title">Preços Competitivos</div>
+        <div class="card-desc">Preços justos e promoções semanais para que sua compra caiba no orçamento.</div>
+      </div>
+      <div class="card">
+        <div class="card-ico">📍</div>
+        <div class="card-title">Localização Central</div>
+        <div class="card-desc">Lote 18, Riacho Fundo I — fácil de chegar, com acesso conveniente para toda a vizinhança.</div>
+      </div>
+      <div class="card">
+        <div class="card-ico">🤝</div>
+        <div class="card-title">Atendimento de Bairro</div>
+        <div class="card-desc">Equipe prestativa e ambiente acolhedor. Aqui você não é só mais um cliente, é vizinho.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA AÇOUGUE -->
+<section class="acougue" id="acougue">
+  <span class="badge-acougue">🥩 Açougue do Mercado Central</span>
+  <div class="section-label">Galeria</div>
+  <h2 class="section-title">Cortes feitos na hora,<br>carnes de primeira</h2>
+  <p class="section-sub">O açougue mais elogiado do Riacho Fundo I. Veja você mesmo a qualidade dos nossos cortes.</p>
+
+  <div class="galeria-destaque">
+    <div class="foto foto-principal" onclick="abrirLightbox(this)">
+      <img src="img/churrasco.jpeg" alt="Churrasco com carnes do Mercado Central" />
+      <div class="legenda">🔥 Do nosso açougue direto para a sua grelha</div>
+    </div>
+    <div class="foto foto-secundaria" onclick="abrirLightbox(this)">
+      <img src="img/carne1.jpeg" alt="Cortes frescos do açougue" />
+      <div class="legenda">Cortes variados frescos do dia</div>
+    </div>
+    <div class="foto foto-secundaria" onclick="abrirLightbox(this)">
+      <img src="img/carne2.jpeg" alt="Corte em leque aberto" />
+      <div class="legenda">Corte especial em leque</div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="fecharLightbox()">
+    <button class="lightbox-fechar" onclick="fecharLightbox()">✕</button>
+    <img id="lightbox-img" src="" alt="Foto ampliada" />
+  </div>
+</section>
+
+  <!-- PROMOÇÕES -->
+  <section class="promocoes" id="promocoes">
+    <div class="section-label">Ofertas da semana</div>
+    <h2 class="section-title">Não perca antes que acabe</h2>
+    <p class="section-sub">Promoções válidas de segunda a sábado, enquanto durarem os estoques.</p>
+    <div class="promo-grid">
+      <div class="promo-card">
+        <span class="promo-emoji">🍅</span>
+        <div class="promo-nome">Tomate Italiano (kg)</div>
+        <div class="promo-de">R$ 8,90</div>
+        <div class="promo-preco">R$ 4,99</div>
+        <span class="promo-badge">-44%</span>
+      </div>
+      <div class="promo-card">
+        <span class="promo-emoji">🐔</span>
+        <div class="promo-nome">Frango Inteiro (kg)</div>
+        <div class="promo-de">R$ 14,90</div>
+        <div class="promo-preco">R$ 9,90</div>
+        <span class="promo-badge">-34%</span>
+      </div>
+      <div class="promo-card">
+        <span class="promo-emoji">🥛</span>
+        <div class="promo-nome">Leite Integral 1L (cx 12)</div>
+        <div class="promo-de">R$ 58,00</div>
+        <div class="promo-preco">R$ 44,90</div>
+        <span class="promo-badge">-23%</span>
+      </div>
+      <div class="promo-card">
+        <span class="promo-emoji">🫒</span>
+        <div class="promo-nome">Azeite Extra Virgem 500ml</div>
+        <div class="promo-de">R$ 39,90</div>
+        <div class="promo-preco">R$ 28,90</div>
+        <span class="promo-badge">-28%</span>
+      </div>
+      <div class="promo-card">
+        <span class="promo-emoji">🍌</span>
+        <div class="promo-nome">Banana Prata (dúzia)</div>
+        <div class="promo-de">R$ 7,50</div>
+        <div class="promo-preco">R$ 4,50</div>
+        <span class="promo-badge">-40%</span>
+      </div>
+      <div class="promo-card">
+        <span class="promo-emoji">🧀</span>
+        <div class="promo-nome">Queijo Muçarela (500g)</div>
+        <div class="promo-de">R$ 22,90</div>
+        <div class="promo-preco">R$ 16,90</div>
+        <span class="promo-badge">-26%</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HORÁRIOS E LOCALIZAÇÃO -->
+  <section class="info-section" id="horarios">
+    <div class="info-grid">
+      <div class="info-block">
+        <div class="section-label">Funcionamento</div>
+        <h3>Quando você precisar, estamos aqui</h3>
+        <div class="horario-row"><span class="horario-dia">Segunda – Sexta</span><span class="horario-hora aberto">07h – 21h</span></div>
+        <div class="horario-row"><span class="horario-dia">Sábado</span><span class="horario-hora aberto">07h – 20h</span></div>
+        <div class="horario-row"><span class="horario-dia">Domingo</span><span class="horario-hora aberto">08h – 14h</span></div>
+        <div class="horario-row"><span class="horario-dia">Feriados</span><span class="horario-hora aberto">08h – 13h</span></div>
+        <div class="pico-aviso">⏱ Costuma ficar um pouco movimentado às 10h.</div>
+      </div>
+      <div class="info-block">
+        <div class="section-label">Como chegar</div>
+        <h3>Estamos no Riacho Fundo I</h3>
+        <iframe class="mapa-frame"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.5!2d-48.0585!3d-15.9018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a2dc97dc3037f%3A0x17c4743c6c010030!2sMercado%20Central!5e0!3m2!1spt-BR!2sbr!4v1"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Localização Mercado Central">
+        </iframe>
+        <div class="contato-info">
+          <span>📍 Lote 18, Riacho Fundo I, Brasília – DF, 71820-510</span>
+          <span>📞 <a href="tel:+556133992695">(61) 3399-2695</a></span>
+          <span>🌐 <a href="http://mercadocentral.com.br/" target="_blank" rel="noopener">mercadocentral.com.br</a></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="depoimentos" id="depoimentos">
+    <div class="section-label">O que dizem nossos clientes</div>
+    <h2 class="section-title">A vizinhança aprova</h2>
+    <p class="section-sub" style="margin-bottom:3rem;">4,3 ★ de média em 24 avaliações no Google.</p>
+    <div class="dep-grid">
+      <div class="dep-card">
+        <div class="dep-stars">★★★★★</div>
+        <p class="dep-texto">"Mercadinho local com boa variedade, preços e entrega em domicílio."</p>
+        <div class="dep-autor">
+          <div class="dep-avatar">👤</div>
+          <div><div class="dep-nome">Cliente Google</div><div class="dep-bairro">Riacho Fundo I</div></div>
+        </div>
+      </div>
+      <div class="dep-card">
+        <div class="dep-stars">★★★★★</div>
+        <p class="dep-texto">"Melhor açougue do Riacho Fundo I com as melhores carnes."</p>
+        <div class="dep-autor">
+          <div class="dep-avatar">👤</div>
+          <div><div class="dep-nome">Cliente Google</div><div class="dep-bairro">Riacho Fundo I</div></div>
+        </div>
+      </div>
+      <div class="dep-card">
+        <div class="dep-stars">★★★★★</div>
+        <p class="dep-texto">"Um mercado de bairro onde você encontra de tudo."</p>
+        <div class="dep-autor">
+          <div class="dep-avatar">👤</div>
+          <div><div class="dep-nome">Cliente Google</div><div class="dep-bairro">Riacho Fundo I</div></div>
+        </div>
+      </div>
+    </div>
+    <a class="google-link" href="https://www.google.com/search?q=mercado+central+riacho+fundo+1" target="_blank" rel="noopener">
+      Ver todas as avaliações no Google →
+    </a>
+  </section>
+
+  <!-- CTA FINAL -->
+<section class="cta-final">
+  <h2>Venha visitar ou ligue agora</h2>
+  <p>Boa variedade, preços justos e entrega no bairro.</p>
+  
+  <a class="btn-branco" href="tel:+556133992695">📞 (61) 3399-2695</a>
+
+  <a class="nav-wpp_rod" href="https://api.whatsapp.com/send?phone=5561999222941" target="_blank" rel="noopener">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4c-4.93 0-8.94 4-8.94 8.93a8.87 8.87 0 0 0 1.32 4.7L4 22l4.5-1.36a8.94 8.94 0 0 0 3.55.75h.01c4.92 0 8.94-4 8.94-8.93a8.88 8.88 0 0 0-2.4-6.14ZM12.06 20a7.4 7.4 0 0 1-3.77-1.03l-.27-.16-2.8.85.84-2.75-.18-.28a7.42 7.42 0 0 1-1.13-3.94c0-4.1 3.34-7.44 7.45-7.44a7.4 7.4 0 0 1 5.27 2.18 7.4 7.4 0 0 1 2.17 5.26c0 4.1-3.34 7.44-7.45 7.44Zm4.08-5.57c-.22-.11-1.32-.65-1.52-.73-.2-.07-.35-.11-.5.11-.15.22-.57.73-.7.88-.13.15-.26.16-.48.05-.22-.11-.93-.34-1.77-1.1a6.65 6.65 0 0 1-1.23-1.53c-.13-.22-.01-.34.1-.45.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.16.04-.3-.02-.42-.07-.11-.6-1.45-.82-1.98-.22-.52-.45-.46-.62-.46-.16 0-.34-.02-.52-.02-.18 0-.47.07-.72.32-.25.25-.96.94-.96 2.3 0 1.35.99 2.66 1.12 2.85.14.18 1.93 2.95 4.67 4.02 2.74 1.08 2.74.72 3.23.68.49-.04 1.6-.65 1.83-1.28.22-.62.22-1.16.16-1.27-.06-.11-.22-.18-.45-.29Z"/>
+    </svg>
+    WhatsApp
+  </a>
+
+</section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      <img src="img/logo.png" alt="Mercado Central" />
+    </div>
+    <p><strong>Mercado Central</strong> · Lote 18, Riacho Fundo I, Brasília – DF</p>
+    <p style="margin-top:.5rem;">
+      <a href="tel:+556133992695">(61) 3399-2695</a> &nbsp;·&nbsp;
+      <a href="http://mercadocentral.com.br/" target="_blank">mercadocentral.com.br</a>
+    </p>
+    <p style="margin-top:.75rem;font-size:.78rem;opacity:.5;">© 2026 Mercado Central. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
