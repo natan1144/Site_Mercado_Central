@@ -329,17 +329,13 @@ footer a { color: var(--amarelo); text-decoration: none; }
 @media (max-width: 768px) {
   .hero { grid-template-columns: 1fr; padding: 5rem 6% 3rem; text-align: center; }
   .hero-sub { margin: 0 auto 2rem; }
+  .hero-eyebrow { margin: 0 auto 1rem; }
   .hero-actions { justify-content: center; }
   .nav-links, .nav-buttons { display: none; }
   .hamb-btn { display: flex; }
   .mobile-menu { display: block; }
   .info-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   section { padding: 4rem 6%; }
-  .galeria-destaque {
-    grid-template-columns: 1fr;
-    grid-template-rows: 260px 200px 200px;
-  }
-  .galeria-destaque .foto .legenda { opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
   .esteira-track { animation-duration: 60s; }
@@ -410,4 +406,13 @@ footer a { color: var(--amarelo); text-decoration: none; }
   position: absolute; top: 1.5rem; right: 2rem;
   color: #fff; font-size: 2rem; cursor: pointer;
   background: none; border: none; line-height: 1;
+}
+
+/* GALERIA AÇOUGUE — ajuste mobile (precisa vir DEPOIS da regra base acima) */
+@media (max-width: 768px) {
+  .galeria-destaque {
+    grid-template-columns: 1fr;
+    grid-template-rows: 260px 200px 200px;
+  }
+  .galeria-destaque .foto .legenda { opacity: 1; }
 }

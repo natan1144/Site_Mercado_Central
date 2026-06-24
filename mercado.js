@@ -83,6 +83,11 @@ function closeMobileMenu() {
   btn.setAttribute('aria-expanded', 'false');
 }
 
+document.getElementById('hambBtn').addEventListener('click', toggleMobileMenu);
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', closeMobileMenu);
+});
+
 // fecha o menu mobile automaticamente se a tela for redimensionada para desktop
 window.addEventListener('resize', () => {
   if (window.innerWidth > 768) closeMobileMenu();
